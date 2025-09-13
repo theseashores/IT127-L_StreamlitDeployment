@@ -17,7 +17,7 @@ def main():
 
 @st.cache_data(persist=True)
 def load_data():
-       data = pd.read_csv('/home/coder/Desktop/Project/mushrooms.csv')
+       data = pd.read_csv("mushrooms.csv")
        label = LabelEncoder()
        for col in data.columns:
            data[col] = label.fit_transform(data[col])
@@ -114,3 +114,4 @@ if st.sidebar.checkbox("Show raw data", False):
 
 if __name__ == '__main__':
     main()
+
