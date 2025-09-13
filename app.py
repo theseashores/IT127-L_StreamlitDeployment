@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.svm import SVC
+from sklearn.svm import SVM
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
@@ -114,4 +114,5 @@ if st.sidebar.checkbox("Show raw data", False):
 
 if __name__ == '__main__':
     main()
+
 
