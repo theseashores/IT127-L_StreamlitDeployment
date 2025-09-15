@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.svm import SVC
+from sklearn.svm import SVM
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
@@ -62,7 +62,7 @@ if classifier == 'Support Vector Machine (SVM)':
 
     if st.sidebar.button("Classify", key='classify'):
         st.subheader("Support Vector Machine (SVM) Results")
-        model = SVC(C=C, kernel=kernel, gamma=gamma)
+        model = SVM(C=C, kernel=kernel, gamma=gamma)
         model.fit(x_train, y_train)
         accuracy = model.score(x_test, y_test)
         y_pred = model.predict(x_test)
